@@ -1,0 +1,88 @@
+&CONTROL
+  calculation = 'scf',
+  pseudo_dir = '/projects/academic/alexeyak/Software/PSEUDO/SSSP/SSSP_acc_PBE/',
+  outdir = './',
+  prefix = 'x1',
+  tprnfor = .true.
+  disk_io = 'low',
+  wf_collect = .true.,
+/
+
+&SYSTEM
+  ibrav = 0,
+  celldm(1) = 1.89 ,
+  nat = 24,
+  ntyp = 3,
+  nspin = 2,
+  nbnd = 42,
+  ecutwfc = 30,
+  tot_charge = 0.0,
+  occupations = 'from_input',
+  nosym = .true.,
+/
+
+&ELECTRONS
+  electron_maxstep = 20,
+  conv_thr = 1.D-5,
+  mixing_beta = 0.45,
+/
+
+&IONS
+  ion_dynamics = 'verlet',
+  ion_temperature = 'andersen',
+  tempw = 300.00 ,
+  nraise = 1,
+/
+
+
+ATOMIC_SPECIES
+ C  12.01  C_pbe_v1.2.uspp.F.UPF
+ H  1.008  H.pbe-rrkjus_psl.0.1.UPF
+ N  14.01  N.pbe.theos.UPF
+
+K_POINTS gamma
+                               
+CELL_PARAMETERS
+    15.0000000    0.0000000    0.0000000
+     0.0000000   15.0000000    0.0000000
+     0.0000000    0.0000000   15.0000000
+ 
+ATOMIC_POSITIONS (alat)
+C -1.330 -1.330 -3.865
+C -0.224 -1.612 -3.095
+C -0.167 -1.364 -1.694
+C -1.262 -0.764 -1.077
+C -2.384 -0.431 -1.900
+C -2.477 -0.794 -3.254
+H -1.346 -1.524 -4.958
+H 0.604 -2.102 -3.475
+H -1.188 -0.330 -0.099
+H -3.280 0.080 -1.520
+H -3.356 -0.487 -3.760
+N 1.139 -1.470 -1.088
+N 1.427 -1.750 0.075
+C 0.505 -2.272 1.089
+C -0.006 -3.520 1.035
+C 0.506 -1.560 2.347
+C -0.641 -4.082 2.195
+H 0.104 -4.071 0.084
+C -0.155 -2.120 3.478
+H 1.068 -0.677 2.501
+C -0.724 -3.391 3.355
+H -1.056 -5.066 2.178
+H -0.247 -1.604 4.399
+H -1.208 -3.961 4.196
+
+OCCUPATIONS
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 0 1 0 0 0 0 0
+0 0
+
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 0 0 0 0 0 0
+0 0
+
