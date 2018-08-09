@@ -1,0 +1,20 @@
+Emin0 = 125.126063
+Emin1 = 595.700692
+H_eV = 27.2114*0.5
+set terminal pngcairo font "arial,24" size 800, 600 enhanced rounded truecolor
+ set lmargin at screen 0.20
+ set rmargin at screen 0.90
+ set bmargin at screen 0.20
+ set tmargin at screen 0.95
+ set xlabel "Rotational angle [FPNF, deg]" offset 0.0, 0.5
+ set ylabel "Energy [eV]" offset 0.5, 0.0
+ set key spacing 1.0 font ",22"
+ set key top horizontal
+set yrange [0:5]
+set xtics 30.0
+ set output "FPNF_s0s1_TORSION_uD-SCF_vs_TDDFT.png"
+plot "pes_fpnf_dscf" u ($3+0):($6+Emin0)*H_eV w l lw 2 lt -1 title "DSCF-S_0",\
+ "pes_fpnf_dscf" u ($3+0):($9+Emin0)*H_eV w l lw 2 lt 7 title "DSCF-S_1",\
+"pes_fpnf_td" u ($2+0):($4+Emin1)*H_eV*2.0  w p ps 0.8  pt 7 lt -1 title "TD-S_0",\
+ "pes_fpnf_td" u ($2+0):($5+Emin1)*H_eV*2.0  w p ps 0.8 pt 7 lt 7 title "TD-S_1",\
+
