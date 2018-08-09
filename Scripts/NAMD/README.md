@@ -76,8 +76,8 @@ their website, some important requirement for libra-QE are given here.
 
 ----------------------------------------------
 
-[Quantum Espresso]: <http://www.msg.ameslab.gov/gamess/>
-[Libra]: <http://www.acsu.buffalo.edu/~alexeyak/libra/index.html>
-[link1]: <http://www.acsu.buffalo.edu/~alexeyak/libra/installation.html>
+[Quantum Espresso]: <https://www.quantum-espresso.org/>
+[Libra]: <https://quantum-dynamics-hub.github.io/libra/index.html>
+[link1]: <https://quantum-dynamics-hub.github.io/libra/installation.html>
 [Libra-X]:<https://github.com/Quantum-Dynamics-Hub/Libra-X>
 
